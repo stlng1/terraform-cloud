@@ -92,7 +92,7 @@ module "RDS" {
 
 # The Module creates instances for jenkins, sonarqube abd jfrog
 module "compute" {
-  source           = "./modules/compute"
+  source           = "./modules/Compute"
   ami_base         = var.ami_base
   project_name     = var.project_name
   public_subnets-1 = module.VPC.public_subnets-1
