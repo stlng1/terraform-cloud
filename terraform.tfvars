@@ -1,5 +1,4 @@
 project_name            = "orieja"
-project_phase_name      = "orieja-dev"
 region                  = "eu-west-3"
 vpc_cidr                = "10.0.0.0/16"
 user_arn                = "arn:aws:iam::940373101182:user/terraform"
