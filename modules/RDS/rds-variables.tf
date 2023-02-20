@@ -33,3 +33,8 @@ variable "datalayer-sg" {
   description = "webservers security group"
   type        = string
 }
+
+variable "project_name" {
+  description = "The name to use for identifying all project resources"
+  type        = string
+}

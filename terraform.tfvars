@@ -21,16 +21,16 @@ keypair                 = "terra_16"
 access_point            = ["tooling", "wordpress"]
 
 health_grace_period_asg = {
-  bastion   = 300
-  nginx     = 300
-  tooling   = 300
+  bastion   = 300,
+  nginx     = 300,
+  tooling   = 300,
   wordpress = 300
 }
 
 capacity_asg = {
-  bastion   = 1
-  nginx     = 1
-  tooling   = 1
+  bastion   = 1,
+  nginx     = 1,
+  tooling   = 1,
   wordpress = 1
 }
 

@@ -24,7 +24,7 @@ resource "aws_launch_template" "bastion-launch-template" {
     tags = merge(
       var.tags,
       {
-        Name = "${var.project_phase_name}-bastion-launch-template"
+        Name = "${var.project_name}-bastion-launch-template"
       },
     )
   }

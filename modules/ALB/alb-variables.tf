@@ -50,8 +50,8 @@ variable "tags" {
   default     = {}
 }
 
-variable "project_phase_name" {
-  description = "The name to use for all resources"
+variable "project_name" {
+  description = "The name to use for identifying all project resources"
   type        = string
 }
 

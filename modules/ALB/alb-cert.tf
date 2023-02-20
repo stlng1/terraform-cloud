@@ -12,7 +12,7 @@ resource "aws_acm_certificate" "root_domain_certificate" {
   validation_method         = "DNS"
 
   tags = {
-    Name : var.root_domain_name
+    Name : format("%s-acm_certificate", var.project_name)
   }
 
   lifecycle {

@@ -8,9 +8,9 @@ variable "ami_web" {
   description = "AMI image_ids for the launch templates"
 }
 
-variable "project_phase_name" {
+variable "project_name" {
   type        = string
-  description = "the name-tag of the project phase - dev, stage, prod"
+  description = "the name-tag of the project"
 }
 
 variable "keypair" {

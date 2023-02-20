@@ -8,14 +8,14 @@ module "VPC" {
   public_subnets          = var.public_subnets[*]
   compute_private_subnets = var.compute_private_subnets[*]
   data_private_subnets    = var.data_private_subnets[*]
-  project_phase_name      = var.project_phase_name
+  # project_phase_name      = var.project_phase_name
   project_name            = var.project_name
 }
 
 #Module for Application Load Balancer to create external load balancer and internal load balancer
 module "ALB" {
   source                    = "./modules/ALB"
-  project_phase_name        = var.project_phase_name
+  project_name              = var.project_name
   vpc_id                    = module.VPC.vpc_id
   publicALB-sg              = module.security.publicALB-sg
   privateALB-sg             = module.security.privateALB-sg
@@ -63,7 +63,7 @@ module "AutoScaling" {
   compute_private_subnets-1 = module.VPC.compute_private_subnets-1
   compute_private_subnets-2 = module.VPC.compute_private_subnets-2
   instance_profile          = module.VPC.instance_profile
-  project_phase_name        = var.project_phase_name
+  project_name              = var.project_name
   keypair                   = var.keypair
 }
 
@@ -77,6 +77,7 @@ module "EFS" {
   datalayer-sg           = module.security.datalayer-sg
   access_point           = var.access_point
   user_arn               = var.user_arn
+  project_name           = var.project_name
 }
 
 # RDS module; this module will create the RDS instance in the private subnet
@@ -88,6 +89,7 @@ module "RDS" {
   datalayer-sg           = module.security.datalayer-sg
   data_private_subnets-1 = module.VPC.data_private_subnets-1
   data_private_subnets-2 = module.VPC.data_private_subnets-2
+  project_name           = var.project_name 
 }
 
 # The Module creates instances for jenkins, sonarqube abd jfrog

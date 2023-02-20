@@ -1,7 +1,7 @@
-variable "project_phase_name" {
-  type        = string
-  description = "the name-tag of the project phase - dev, stage, prod"
-}
+# variable "project_phase_name" {
+#   type        = string
+#   description = "the name-tag of the project phase - dev, stage, prod"
+# }
 
 variable "project_name" {
   type = string

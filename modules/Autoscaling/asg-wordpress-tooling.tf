@@ -18,7 +18,7 @@ resource "aws_autoscaling_group" "wordpressASG" {
   }
   tag {
     key                 = "name"
-    value               = "${var.project_phase_name}-wordpressASG-instance-launch"
+    value               = "${var.project_name}-wordpressASG-instance-launch"
     propagate_at_launch = true
   }
 }
@@ -51,7 +51,7 @@ resource "aws_autoscaling_group" "toolingASG" {
 
   tag {
     key                 = "name"
-    value               = "${var.project_phase_name}-toolingASG-instance-launch"
+    value               = "${var.project_name}-toolingASG-instance-launch"
     propagate_at_launch = true
   }
 }

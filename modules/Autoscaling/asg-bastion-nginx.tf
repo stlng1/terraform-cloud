@@ -1,6 +1,6 @@
 # ---- Autoscaling for bastion  hosts
 resource "aws_autoscaling_group" "bastionASG" {
-  name                      = "${var.project_phase_name}-bastionASG"
+  name                      = "${var.project_name}-bastionASG"
   max_size                  = var.max_size_btn
   min_size                  = var.min_size_btn
   health_check_grace_period = var.health_grace_period_asg["bastion"]
@@ -19,7 +19,7 @@ resource "aws_autoscaling_group" "bastionASG" {
  
   tag {
     key                 = "name"
-    value               = "${var.project_phase_name}-bastionASG-instance-launch"
+    value               = "${var.project_name}-bastionASG-instance-launch"
     propagate_at_launch = true
   }
   
@@ -47,7 +47,7 @@ resource "aws_autoscaling_group" "nginxASG" {
 
   tag {
     key                 = "name"
-    value               = "${var.project_phase_name}-nginxASG-instance-launch"
+    value               = "${var.project_name}-nginxASG-instance-launch"
     propagate_at_launch = true
   }
 
