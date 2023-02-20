@@ -1,6 +1,6 @@
 # ---- Autoscaling for bastion  hosts
 resource "aws_autoscaling_group" "bastionASG" {
-  name                      = "${var.project_name}-bastionASG"
+  name                      = "bastionASG"
   max_size                  = var.max_size_btn
   min_size                  = var.min_size_btn
   health_check_grace_period = var.health_grace_period_asg["bastion"]
