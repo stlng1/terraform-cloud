@@ -8,7 +8,7 @@ module "VPC" {
   public_subnets          = var.public_subnets[*]
   compute_private_subnets = var.compute_private_subnets[*]
   data_private_subnets    = var.data_private_subnets[*]
-  # project_phase_name      = var.project_phase_name
+  environment             = var.environment
   project_name            = var.project_name
 }
 
@@ -36,8 +36,9 @@ module "security" {
 
 module "AutoScaling" {
   source                    = "./modules/Autoscaling"
-  ami_base                  = var.ami_base
+  ami_bastion               = var.ami_bastion
   ami_web                   = var.ami_web
+  ami_nginx                 = var.ami_nginx
   instance_type-btn         = "t2.micro"
   min_size_btn              = 2
   max_size_btn              = 2
@@ -95,7 +96,8 @@ module "RDS" {
 # The Module creates instances for jenkins, sonarqube abd jfrog
 module "compute" {
   source           = "./modules/Compute"
-  ami_base         = var.ami_base
+  ami_web          = var.ami_web
+  ami_sonar        = var.ami_sonar
   project_name     = var.project_name
   public_subnets-1 = module.VPC.public_subnets-1
   compute-sg       = module.security.ACS-sg

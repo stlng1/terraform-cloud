@@ -1,6 +1,6 @@
 #launch template for bastion
 resource "aws_launch_template" "bastion-launch-template" {
- image_id                = var.ami_base
+ image_id                = var.ami_bastion
   instance_type          = var.instance_type-btn
   vpc_security_group_ids = [var.bastion-sg]
 
@@ -22,21 +22,21 @@ resource "aws_launch_template" "bastion-launch-template" {
     resource_type = "instance"
 
     tags = merge(
-      var.tags,
+      var.tag,
       {
-        Name = "${var.project_name}-bastion-launch-template"
+        Name = "bastion-launch-template"
       },
     )
   }
 
-  user_data = filebase64("${path.module}/bastion.sh")
+  # user_data = filebase64("${path.module}/bastion.sh")
 }
 
 
 # launch template for nginx
 
 resource "aws_launch_template" "nginx-launch-template" {
-  image_id               = var.ami_base
+  image_id               = var.ami_nginx
   instance_type          = var.instance_type-ngx
   vpc_security_group_ids = [var.nginx-sg]
 
@@ -58,12 +58,12 @@ resource "aws_launch_template" "nginx-launch-template" {
     resource_type = "instance"
 
     tags = merge(
-      var.tags,
+      var.tag,
       {
         Name = "nginx-launch-template"
       },
     )
   }
 
-  user_data = filebase64("${path.module}/nginx.sh")
+  # user_data = filebase64("${path.module}/nginx.sh")
 }
