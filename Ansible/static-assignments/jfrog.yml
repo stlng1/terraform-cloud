@@ -1,0 +1,6 @@
+---
+- hosts: tag_Name_ACS_artifactory
+  user: ec2-user
+  become: true
+  roles:
+     - artifactory
