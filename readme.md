@@ -14,7 +14,7 @@ The tooling code is stored in this repository
 
 Always refer to the given diagram
 
-project image
+![project image](/project_architecture_diagram.png)
 
 # install graphviz
 ---

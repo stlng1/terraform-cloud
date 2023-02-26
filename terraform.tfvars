@@ -10,13 +10,11 @@ data_private_subnets    = ["10.0.5.0/24", "10.0.6.0/24"]
 root_domain_name        = "orieja.com.ng"
 domain_subnet_1         = "wordpress.orieja.com.ng"
 domain_subnet_2         = "tooling.orieja.com.ng"
-environment             = "production"
-ami_bastion             = "ami-08284eb384608e0ef"
-ami_web                 = "ami-08677f0324bb83377"
-ami_nginx               = "ami-08284eb384608e0ef"
-ami_jenkins             = "ami-08284eb384608e0ef"
-ami_sonar               = "ami-08284eb384608e0ef"
-ami_artifactory         = "ami-08284eb384608e0ef"
+environment             = "dev"
+ami_bastion             = "ami-0dc2233ec2fa33994"
+ami_web                 = "ami-00b04727986d85664"
+ami_nginx               = "ami-0aaa0a4e9dbcf878c"
+ami_sonar               = "ami-0ef8d6e250f29e5bf"
 master-username         = "admin"
 master-password         = "password"
 db_name                 = "wordpress"
@@ -38,7 +36,6 @@ capacity_asg = {
 }
 
 tag = {
-  Environment     = "production",
   Owner-Email     = "femi@strangenig.com",
   Managed-By      = "terraform",
   Billing-Account = "940373101182"
