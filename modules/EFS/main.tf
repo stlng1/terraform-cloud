@@ -1,7 +1,7 @@
 # create key from key management system
 resource "aws_kms_key" "ACS_kms" {
-  description = "KMS key"
-  policy      = <<EOF
+  description = "KMS key "
+    policy      = <<EOF
   {
   "Version": "2012-10-17",
   "Id": "kms-key-policy",
@@ -17,6 +17,23 @@ resource "aws_kms_key" "ACS_kms" {
 }
 EOF
 }
+
+#   policy      = <<EOF
+#   {
+#   "Version": "2012-10-17",
+#   "Id": "kms-key-policy",
+#   "Statement": [
+#     {
+#       "Sid": "Enable IAM User Permissions",
+#       "Effect": "Allow",
+#       "Principal": { "AWS": "${var.user_arn}" },
+#       "Action": "kms:*",
+#       "Resource": "*"
+#     }
+#   ]
+# }
+# EOF
+# }
 
 # create key alias
 resource "aws_kms_alias" "alias" {
