@@ -46,7 +46,7 @@ resource "aws_acm_certificate_validation" "root_domain_validation" {
 
 # create records for sub domains - tooling and wordpress
 resource "aws_route53_record" "sub_domain_1" {
-  name    = "var.domain_subnet_1"
+  name    = "${var.domain_subnet_1}"
   zone_id = data.aws_route53_zone.root_domain_zone.zone_id
   type    = "A"
 
@@ -58,7 +58,7 @@ resource "aws_route53_record" "sub_domain_1" {
 }
 
 resource "aws_route53_record" "sub_domain_2" {
-  name    = "var.domain_subnet_2"
+  name    = "${var.domain_subnet_2}"
   zone_id = data.aws_route53_zone.root_domain_zone.zone_id
   type    = "A"
 
