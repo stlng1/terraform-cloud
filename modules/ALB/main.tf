@@ -39,7 +39,7 @@ resource "aws_lb_target_group" "nginxTG" {
   vpc_id      = var.vpc_id
 }
 
-#create a Listner for this target Group
+#create a Listener for this target Group
 resource "aws_lb_listener" "nginx-listener" {
   load_balancer_arn = aws_lb.publicALB.arn
   port              = 443
