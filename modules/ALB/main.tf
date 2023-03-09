@@ -144,7 +144,7 @@ resource "aws_lb_listener_rule" "tooling-listener" {
 
   condition {
     host_header {
-      values = ["var.domain_subnet_2"]
+      values = var.domain_subnet_2
     }
   }
 }
