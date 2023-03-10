@@ -133,7 +133,7 @@ resource "aws_lb_listener" "web-listener" {
 
 # listener rule for tooling target
 
-resource "aws_lb_listener_rule" "tooling-listener" {
+resource "aws_lb_listener_rule" "tooling_listener" {
   listener_arn = aws_lb_listener.web-listener.arn
   priority     = 99
 
@@ -144,7 +144,8 @@ resource "aws_lb_listener_rule" "tooling-listener" {
 
   condition {
     host_header {
-      values = ["${var.domain_subnet_2}"]
+      # values = ["${var.domain_subnet_2}"]
+      values = ["tooling"]
     }
   }
 }
