@@ -33,7 +33,7 @@ output "vpc_id" {
 }
 
 output "instance_profile" {
-  value = aws_iam_instance_profile.ip.id
+  value = aws_iam_instance_profile.ipro.id
 }
 
 output "list_of_az" {
