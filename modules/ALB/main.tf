@@ -145,7 +145,7 @@ resource "aws_lb_listener_rule" "tooling_listener" {
   condition {
     host_header {
       # values = ["${var.domain_subnet_2}"]
-      values = ["tooling"]
+      values = ["tooling.orieja.com.ng"]
     }
   }
 }
