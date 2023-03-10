@@ -90,7 +90,7 @@ module "RDS" {
   datalayer-sg           = module.security.datalayer-sg
   data_private_subnets-1 = module.VPC.data_private_subnets-1
   data_private_subnets-2 = module.VPC.data_private_subnets-2
-  project_name           = var.project_name 
+  project_name           = var.project_name
 }
 
 # The Module creates instances for jenkins, sonarqube abd jfrog
