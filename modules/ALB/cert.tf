@@ -68,4 +68,3 @@ resource "aws_route53_record" "sub_domain_2" {
     evaluate_target_health = true
   }
 }
-
