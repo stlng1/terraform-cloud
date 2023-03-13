@@ -14,16 +14,18 @@ sudo echo "export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/t
 source ~/.bash_profile
 
 
+sudo yum -y install python3-pip
+
 # install botocore, ansible and awscli
-sudo python3 -m pip install boto
-sudo python3 -m pip install boto3
-sudo python3 -m pip install PyMySQL
-sudo python3 -m pip install mysql-connector-python
-sudo python3 -m pip install --upgrade setuptools
-sudo python3 -m pip install --upgrade pip
-sudo python3 -m pip install psycopg2==2.7.5 --ignore-installed
-sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-sudo unzip awscliv2.zip
+pip install boto
+pip install boto3
+pip install PyMySQL
+pip install mysql-connector-python
+pip install --upgrade setuptools
+pip install --upgrade pip
+pip install psycopg2==2.7.5 --ignore-installed
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
 sudo ./aws/install
 sudo yum install ansible -y
 sudo yum install -y policycoreutils-python-utils

@@ -1,0 +1,8 @@
+[tooling]
+10.0.8.173 ansible_ssh_user='ec2-user'
+
+[wordpress]
+10.0.3.100 ansible_ssh_user='ec2-user'
+
+# [nginx]
+# 10.200.0.9 ansible_ssh_user='FEMMY'
