@@ -7,6 +7,8 @@ sudo systemctl enable chronyd
 sudo yum module reset php -y
 sudo yum module enable php:remi-7.4 -y
 
+sudo yum install python3-pip -y
+
 # selinux config
 sudo setsebool -P httpd_can_network_connect=1
 sudo setsebool -P httpd_can_network_connect_db=1
