@@ -1,7 +1,7 @@
-[tooling]
+[tag_Name_ACS_tooling]
 10.0.8.173 ansible_ssh_user='ec2-user'
 
-[wordpress]
+[tag_Name_ACS_wordpress]
 10.0.3.100 ansible_ssh_user='ec2-user'
 
 # [nginx]

@@ -3,15 +3,15 @@
     name: pymysql
     state: present
     
-# - name: create database
-#   community.mysql.mysql_db:
-#     login_host: "terraform-20230313160015988800000008.cgbiymybzdx7.eu-west-3.rds.amazonaws.com" 
-#     login_user: "admin"
-#     login_password: "PassWord"
-#     name: wordpressdb
-#     collation: utf8_general_ci
-#     encoding: utf8
-#     state: present
+- name: create database
+  community.mysql.mysql_db:
+    login_host: "terraform-20230313160015988800000008.cgbiymybzdx7.eu-west-3.rds.amazonaws.com" 
+    login_user: "admin"
+    login_password: "PassWord"
+    name: wordpressdb
+    collation: utf8_general_ci
+    encoding: utf8
+    state: present
 
 
 - name: Input wordpress credentials

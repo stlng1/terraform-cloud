@@ -17,7 +17,7 @@ ami_nginx               = "ami-01abcf051c129c12d"
 ami_sonar               = "ami-05b59ffa491b7a58e"
 master-username         = "admin"
 master-password         = "password"
-db_name                 = "wordpressdb"
+db_name                 = "wordpress"
 keypair                 = "terra_16"
 access_point            = ["tooling", "wordpress"]
 
