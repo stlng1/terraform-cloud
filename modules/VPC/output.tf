@@ -40,4 +40,14 @@ output "list_of_az" {
   value       = data.aws_availability_zones.available[*].names
   description = "list of available availability zones"
 }
+
+output "CustomEIP" {
+  value       = aws_eip.nat_eip.id
+  description = "Custom elastic ip we created."
+}
+
+output "CustomNAT" {
+  value       = aws_nat_gateway.nat.id
+  description = "NAT Gateway ID."
+}
   

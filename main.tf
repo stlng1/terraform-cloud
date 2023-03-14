@@ -64,8 +64,8 @@ module "AutoScaling" {
   compute_private_subnets-1 = module.VPC.compute_private_subnets-1
   compute_private_subnets-2 = module.VPC.compute_private_subnets-2
   instance_profile          = module.VPC.instance_profile
-  project_name              = var.project_name
-  keypair                   = var.keypair
+  project_name = var.project_name
+  keypair      = var.keypair
 }
 
 # # Module for Elastic Filesystem; this module will create elastic file system in the webservers availablity
