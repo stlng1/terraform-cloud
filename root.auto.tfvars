@@ -29,10 +29,10 @@ health_grace_period_asg = {
 }
 
 capacity_asg = {
-  bastion   = 2,
-  nginx     = 2,
-  tooling   = 2,
-  wordpress = 2
+  bastion   = 1,
+  nginx     = 1,
+  tooling   = 1,
+  wordpress = 1
 }
 
 tag = {
